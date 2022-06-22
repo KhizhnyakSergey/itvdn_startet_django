@@ -1,0 +1,20 @@
+{% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list|dictsort:"id" %}
+            <li>
+                <a href="/lesson_3/post/{{ question.id }}/">
+                    {{ question.question_text|default:"Нет вопроса" }}
+                </a>
+            </li>
+        {% endfor %}
+        <li>
+            <a>{{ latest_question_list|random }}</a>
+        </li>
+<!--    {{ latest_question_list|random }}-->
+<!--        {% comment "some commets" %}-->
+<!--    {{ latest_question_list|random }}-->
+<!--        {% endcomment %}-->
+    <ul>
+{% else %}
+    <p>Список вопросов пуст.</p>
+{% endif %}
