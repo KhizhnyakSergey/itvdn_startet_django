@@ -21,13 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'in4jgs7dfn5gij6nd159th1r89hd8sf65b489sgh4sd5fh54sf4dh8rj5ads84kl8ui9lfg7gf6sfg5sr1g')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost', 'https://itvdn-test-khiz.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost', 'itvdn-test-khiz.herokuapp.com/']
 
 SESSION_COOKIE_SECURE = True
 
